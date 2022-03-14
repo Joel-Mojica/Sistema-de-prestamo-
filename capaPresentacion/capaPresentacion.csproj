@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D6C7134A-84F8-43EE-B353-E216C3D58F60}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>capaPresentacion</RootNamespace>
+    <AssemblyName>capaPresentacion</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Agregar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Agregar.Designer.cs">
+      <DependentUpon>Agregar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="baseDeDatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="baseDeDatos.Designer.cs">
+      <DependentUpon>baseDeDatos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="borrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="borrar.Designer.cs">
+      <DependentUpon>borrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modificar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modificar.Designer.cs">
+      <DependentUpon>Modificar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pagos.Designer.cs">
+      <DependentUpon>pagos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P_Prestamos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P_Prestamos.Designer.cs">
+      <DependentUpon>P_Prestamos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Agregar.resx">
+      <DependentUpon>Agregar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="baseDeDatos.resx">
+      <DependentUpon>baseDeDatos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="borrar.resx">
+      <DependentUpon>borrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modificar.resx">
+      <DependentUpon>Modificar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pagos.resx">
+      <DependentUpon>pagos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P_Prestamos.resx">
+      <DependentUpon>P_Prestamos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\capaDatos\capaDatos.csproj">
+      <Project>{F6AF4B89-60C7-462A-9D95-4AC0F995C724}</Project>
+      <Name>capaDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\capaNegocios\capaNegocios.csproj">
+      <Project>{4307302C-91A3-4BD5-970D-9B884D756380}</Project>
+      <Name>capaNegocios</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entidad\capaEntidad.csproj">
+      <Project>{7E59456F-61E2-4A9F-AB81-A6328279DFC1}</Project>
+      <Name>capaEntidad</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_save_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iconos\icons8_user_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iconos\icons8_bank_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iconos\icons8_show_property_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iconos\icons8_bank_80px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iconos\icons8_menu_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_delete_bin_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_edit_property_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_search_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iconos\icons8_refund_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iconos\icons8_delete_file_64px.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
